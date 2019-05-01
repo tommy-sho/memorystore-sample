@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package sample;
+
+option go_package = "sample";
+
+
+service SampleService {
+    rpc Register(RegisterRequest) returns (RegisterResponse) {}
+    rpc Get(GetRequest) returns (GetResponse) {}
+}
+
+message RegisterRequest {
+    string key = 1;
+    string value = 2;
+}
+
+message RegisterResponse {}
+
+
+message GetRequest {
+    string key = 1;
+}
+
+message GetResponse {
+    string key = 1;
+    string value = 2;
+}
