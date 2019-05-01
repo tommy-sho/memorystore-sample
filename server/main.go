@@ -6,7 +6,7 @@ import (
 	"net"
 	"os"
 
-	sample "github.com/tommy-sho/memory-store-sample/proto"
+	sample "github.com/tommy-sho/memory-store-sample/server/genproto"
 	server "github.com/tommy-sho/memory-store-sample/server/internal"
 	"google.golang.org/grpc"
 )

@@ -6,7 +6,7 @@ import (
 
 	"github.com/tommy-sho/memory-store-sample/server/redis"
 
-	sample "github.com/tommy-sho/memory-store-sample/proto"
+	sample "github.com/tommy-sho/memory-store-sample/server/genproto"
 )
 
 type sampleServcer struct {

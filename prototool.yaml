@@ -1,0 +1,24 @@
+protoc:
+  version: 3.7.1
+
+generate:
+  go_options:
+    import_path: github.com/tommy-sho/memory-store-sample
+  plugins:
+    - name: go
+      type: go
+      flags: plugins=grpc
+      output: .
+
+lint:
+  rules:
+    no_default: true
+    add:
+      - SYNTAX_PROTO3
+      - RPC_NAMES_CAMEL_CASE
+      - REQUEST_RESPONSE_TYPES_UNIQUE
+      - ENUM_FIELD_NAMES_UPPER_SNAKE_CASE
+      - ENUM_NAMES_CAPITALIZED
+      - FILE_OPTIONS_REQUIRE_GO_PACKAGE
+      - MESSAGE_FIELD_NAMES_LOWER_SNAKE_CASE
+      - ENUMS_HAVE_COMMENTS
